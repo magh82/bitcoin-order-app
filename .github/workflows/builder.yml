@@ -17,7 +17,7 @@ jobs:
       # Reference the major version of a release
       - uses: actions/checkout@v4
       # Reference a specific version
-       - uses: actions/checkout@v4.2.0
+      - uses: actions/checkout@v4.2.0
       # Reference a branch
       - uses: actions/checkout@main
       
