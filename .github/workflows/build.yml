@@ -1,34 +1,3 @@
-
-S-DOEA - Workshop 6 - DevOps in the Cloud
-Objective
-The objective of this workshops is to learn how to setup and deploy frontend app using Github with Github Actions
-
-Pre-requisite
-Github Account
-Workshop
-In this workshop you will setup a CD/CI to automatically build and publish your Frontend application to Github Pages using Github Actions.
-
-Fork the source codes from the following URL https://github.com/kenken64/bitcoin-order-app to your own Github account. (Uncheck fork only main branch)
-$ git clone https://github.com/<replace this with your github userid>/bitcoin-order-app
-Checkout the githubcicd branch
- $ git checkout githubcicd
-Generate the personal access token from Github platform, select the repo , workflow scope and save the token to somewhere on your editor 
-
-
-Navigate to the bitcoin app repository on the Github platform
-
-Configure a WORKSHOP6_GITHUB_TOKEN secret environment variable for the Bitcoin app repo. The value shown on the screenshots is generated from the Github personal token generation page (Step 3). Remember to Click on the Add secret button.   
-Under the working directory of the bitcoin app create the following directory
-.github/workflows/
-Under the above newly created directory which is likely to be hidden on the windows explorer create a file as below, not on the linux or mac system.
-.github/workflows/build.yml
-Add the following codes into the build.yml file (Cloned githubrepo ). Do not replace or remove the value $WORKSHOP6_GITHUB_TOKEN and GITHUB_TOKEN. Please take note yaml file are case sensitive and indentation sensitive.
-Features:
-
-Install all relevant dependencies
-Perform a build on the frontend
-Execute all test cases for the frotnend app
-Deploy to the cloud provider
 name: Bitcoin order App
 on:
   push:
